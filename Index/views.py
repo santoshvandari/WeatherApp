@@ -1,8 +1,9 @@
 from django.shortcuts import render
+import requests,datetime
 
 # Create your views here.
 def home(request):
-     city=""
+    city=""
     if request.method=='POST':
         city = request.POST.get("city").strip()
     if city=="":
@@ -21,5 +22,3 @@ def home(request):
                 return render(request,"index.html",{'code':response.status_code,'city':city})
     except:
             return render(request,"index.html",{"error":True,'city':city})   
-    # return render(request,"index.html")
-    return render(request,"index.html")
