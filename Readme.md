@@ -5,7 +5,7 @@ git clone https://github.com/santoshvandari/WeatherApp
 
 cd WeatherApp
 
-pip install requirements.txt
+pip install -r requirements.txt
 
 python manage.py runserver # Windows and Mac Os
 
