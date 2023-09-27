@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+    color: #fff;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2c3e50;
+  }
+  
+  .container .search-city {
+    margin: 50px 0px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .container .search-city input {
+    width: 350px;
+    padding: 15px 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 5px solid #1abc9c;
+    background: transparent;
+    font-weight: bold;
+    font-size: 20px
+  }
+  .container .search-city input::-moz-placeholder {
+    color: #fff;
+  }
+  .container .search-city input::placeholder {
+    color: #fff;
+  }
+  .container .search-city button {
+    padding: 15px 35px;
+    border-radius: 5px;
+    outline: none;
+    background: #e74c3c;
+    font-weight: bold;
+    border: none;
+    margin: 0px 5px;
+  }
+  .container .search-city button:active {
+    background: transparent;
+    border: 3px solid #000;
+  }
+  .container h1 {
+    text-align: center;
+    font-size: 58px;
+    font-weight: 500;
+  }
+  .container h1 span {
+    text-transform: uppercase;
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  .container .cards {
+    display: flex;
+    margin: 30px 0px;
+  }
+  .container .cards .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    margin: 5px 40px;
+    border: 5px solid #1a6fa0;
+    background: transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .container .cards .card h2 {
+    padding: 25px 0px;
+  }
+  .container .cards .card p {
+    font-size: 30px;
+  }
+  .container .cards .card p span {
+    font-size: 45px;
+    font-weight: bold;
+    padding: 0px 10px;
+  }
+  .container .other {
+    margin: 20px 0px;
+  }
+  .container .other h1 {
+    text-transform: capitalize;
+    margin: 10px 0px;
+    text-decoration: underline;
+  }
+  .container .other table {
+    border: none;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  .container .other table tr td, .container .other table tr th {
+    font-size: 20px;
+    border: 2px solid #1bb906;
+    border-left: none;
+    border-right: none;
+    text-transform: uppercase;
+    padding: 10px 0px;
+  }
+  .container .other table tr td {
+    text-transform: capitalize;
+  }
+  .container #errorMessage {
+    font-size: 100px;
+    padding: 100px 0px;
+    text-align: center;
+  }
+  .container #errorMessage p {
+    font-size: 50px;
+  }
+  
+  footer p {
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  footer p a {
+    padding: 5px 0px;
+    display: block;
+    text-decoration: none;
+    color: #1abc9c;
+  }
