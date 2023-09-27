@@ -40,6 +40,7 @@
     border-radius: 5px;
     outline: none;
     background: #e74c3c;
+    border: 3px solid #e74c3c;
     font-weight: bold;
     border: none;
     margin: 0px 5px;
