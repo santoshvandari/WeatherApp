@@ -1,4 +1,5 @@
 # Usages
+Please Follow the steps to Run this in your local Machine
 ```bash 
 git clone https://github.com/santoshvandari/WeatherApp
 cd WeatherApp
