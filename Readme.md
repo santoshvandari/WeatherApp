@@ -1,1 +1,3 @@
-# Not in Workable Condition
+# Usages
+```bash 
+git clone https://github.com/santoshvandari/WeatherApp
