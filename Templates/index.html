@@ -1,1 +1,80 @@
-Hello
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css"/>
+    {% comment %} <script defer src="static/js/script.js"></script> {% endcomment %}
+    <title>Weather Information Application</title>
+</head>
+<body>
+    <main>
+    <div class="container">
+        <form class="search-city" method="POST">
+            {% csrf_token %}
+            <input type="text" name="city" placeholder="Enter the City"/>
+            <button type="submit">Search</button>
+        </form>
+
+        <h1>Weather Information of <span id="city">{{ city }}</span></h1>
+        {% if code or error %}
+        <div id="errorMessage">
+            {% if code %}
+                Sorry! City didn't Found
+                <p>Please Enter Another City</p>
+            {% endif %}
+            {% if error %}
+                Internet Connection Failed
+                <p>Please to the Internet</p>
+                {% endif %}
+        </div>
+        {% else %}
+        <div class="cards">
+            <div class="card card1">
+                <h2>Temperature</h2>
+                <p>{{temp}} &#8451</p>
+            </div>
+            <div class="card card1">
+                <h2>Humidity</h2>
+                <p>{{humidity}}m/s</p>
+            </div>
+            <div class="card card1">
+                <h2>Wind</h2>
+                <p>{{wind_speed}}km/hr</p>
+            </div>
+        </div>
+        <div class="other">
+            <h1>Other Info</h1>
+            <table>
+                <tr>
+                    <th>City</th>
+                    <th>Cloud PCT</th>
+                    <th>Wind Degree</th>
+                    <th>Max Temp.</th>
+                    <th>Min Temp.</th>
+                    <th>Sunrise</th>
+                    <th>Sunset</th>
+                </tr>
+                <tr>
+                    <td id="InfoCity">city</td>
+                    <td id="cloudPCT">{{cloud_pct}}</td>
+                    <td id="windDegree">{{wind_degrees}}</td>
+                    <td id="maxTemp">{{max_temp}}</td>
+                    <td id="minTemp">{{min_temp}}</td>
+                    <td id="sunrise">{{sunrise}}</td>
+                    <td id="sunset">{{sunset}}</td>
+                    
+                </tr>
+            </table>
+        </div>
+        {% endif %}
+       
+    </div>
+    </main>
+    <footer>
+        <p>Designed By <a href="https://www.github.com/santoshvandari" target="_blank"> Santosh Bhandari</a></p>
+    </footer>    
+</body>
+</html>
