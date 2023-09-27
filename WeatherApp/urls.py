@@ -19,5 +19,5 @@ from django.urls import path,redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",redirect("Index.urls")),
+    # path("",redirect("Index.urls")),
 ]
