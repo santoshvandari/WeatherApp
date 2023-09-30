@@ -9,7 +9,7 @@ pip install -r requirements.txt
 
 python manage.py runserver # Windows and Mac Os
 
-python3 manange.py runserver #Linus OS
+python3 manange.py runserver #Linux OS
 ```
 
 Note: It will be Better if you create Virtual Environment for running in your local machine.
